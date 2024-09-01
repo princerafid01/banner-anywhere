@@ -3,7 +3,7 @@
 client_id = "76d8fe1e3c1044d8312f3c8b5db76765"
 name = "Banner Anywhere"
 handle = "banner-anywhere"
-application_url = "https://occurred-television-sitting-egypt.trycloudflare.com"
+application_url = "https://funk-ups-artificial-excellence.trycloudflare.com"
 embedded = true
 
 [build]
@@ -17,9 +17,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://occurred-television-sitting-egypt.trycloudflare.com/auth/callback",
-  "https://occurred-television-sitting-egypt.trycloudflare.com/auth/shopify/callback",
-  "https://occurred-television-sitting-egypt.trycloudflare.com/api/auth/callback"
+  "https://funk-ups-artificial-excellence.trycloudflare.com/auth/callback",
+  "https://funk-ups-artificial-excellence.trycloudflare.com/auth/shopify/callback",
+  "https://funk-ups-artificial-excellence.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]

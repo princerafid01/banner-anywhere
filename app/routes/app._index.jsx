@@ -15,6 +15,7 @@ import {
 } from "@shopify/polaris";
 import { TitleBar, useAppBridge } from "@shopify/app-bridge-react";
 import { authenticate } from "../shopify.server";
+import Dashboard from "./views/Dashboard";
 
 export const loader = async ({ request }) => {
   await authenticate.admin(request);
@@ -132,13 +133,7 @@ export default function Index() {
       <BlockStack gap="500">
         <Layout>
           <Layout.Section>
-            <Card>
-              <BlockStack gap="200">
-                <Text as="h2" variant="headingMd">
-                  Banner List
-                </Text>
-              </BlockStack>
-            </Card>
+            <Dashboard />
           </Layout.Section>
           <Layout.Section variant="oneThird">
             <BlockStack gap="500">
