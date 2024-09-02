@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Button, ActionList, Popover } from "@shopify/polaris";
+import BannerEditor from "./Components/BannerEditor";
 
 export default function BannerCreateButton() {
   const [active, setActive] = useState(false);
@@ -35,7 +36,7 @@ export default function BannerCreateButton() {
         />
       </Popover>
       <ui-modal id="my-modal" variant="max">
-        <div>Content</div>
+        <BannerEditor />
         <ui-title-bar title="Banner Anywhere - Create Banner">
           <button variant="primary">Publish</button>
           <button>Secondary action</button>
