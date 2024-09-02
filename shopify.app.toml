@@ -3,7 +3,7 @@
 client_id = "76d8fe1e3c1044d8312f3c8b5db76765"
 name = "Banner Anywhere"
 handle = "banner-anywhere"
-application_url = "https://funk-ups-artificial-excellence.trycloudflare.com"
+application_url = "https://what-productivity-gen-has.trycloudflare.com"
 embedded = true
 
 [build]
@@ -17,9 +17,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://funk-ups-artificial-excellence.trycloudflare.com/auth/callback",
-  "https://funk-ups-artificial-excellence.trycloudflare.com/auth/shopify/callback",
-  "https://funk-ups-artificial-excellence.trycloudflare.com/api/auth/callback"
+  "https://what-productivity-gen-has.trycloudflare.com/auth/callback",
+  "https://what-productivity-gen-has.trycloudflare.com/auth/shopify/callback",
+  "https://what-productivity-gen-has.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
