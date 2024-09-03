@@ -28,89 +28,90 @@ export default function BannerEditor() {
   const [openInNewTab, setOpenInNewTab] = useState(true);
   const [text, setText] = useState("🎁 Special discount — 50% off all items");
   const iconMenu = [
-    { icon: HomeIcon, tooltip: "Home" },
-    { icon: OrderIcon, tooltip: "Orders" },
-    { icon: ProductIcon, tooltip: "Products" },
-    { icon: PersonFilledIcon, tooltip: "Customers" },
-    { icon: DataTableIcon, tooltip: "Analytics" },
-    { icon: SettingsIcon, tooltip: "Settings" },
+    { icon: HomeIcon, tooltip: "Templates" },
+    { icon: OrderIcon, tooltip: "Content" },
+    { icon: ProductIcon, tooltip: "Styles" },
+    { icon: PersonFilledIcon, tooltip: "Settings" },
   ];
 
   return (
-    <Layout>
-      {/* Sidebar */}
-      <Layout.Section variant="oneThird">
-        <InlineStack gap="600">
-          <div style={{ padding: "10px" }}>
-            {iconMenu.map(({ icon, tooltip }, key) => (
-              <div
-                style={{
-                  textAlign: "center",
-                  display: "block",
-                  padding: "10px",
-                }}
-                key={key}
-              >
-                <Icon source={icon} />
-                {tooltip}
-              </div>
-            ))}
-          </div>
+    <div style={{ backgroundColor: 'rgba(0,0,0,0.05)', height: '100%' }}>
 
-          <Card>
-            <FormLayout>
-              <TextField
-                label="URL"
-                value={url}
-                onChange={(value) => setUrl(value)}
-                prefix={<Link>Visit link</Link>}
-                connectedRight={
-                  <Button onClick={() => alert("All products selected")}>
-                    All products
-                  </Button>
-                }
-              />
-              <Checkbox
-                label="Open in new tab"
-                checked={openInNewTab}
-                onChange={(checked) => setOpenInNewTab(checked)}
-              />
-              <TextField
-                label="Text"
-                value={text}
-                onChange={(value) => setText(value)}
-                multiline
-                prefix={<strong>Locales</strong>}
-                helpText="Add the banner text here"
-              />
-            </FormLayout>
+      <Layout >
+        {/* Sidebar */}
+        <Layout.Section variant="oneThird">
+          <InlineStack gap="600">
+            <div style={{ padding: "8px", height: '100vh' }}>
+              {iconMenu.map(({ icon, tooltip }, key) => (
+                <div
+                  style={{
+                    textAlign: "center",
+                    display: "block",
+                    padding: "10px 0",
+                  }}
+                  key={key}
+                >
+                  <Icon source={icon} />
+                  {tooltip}
+                </div>
+              ))}
+            </div>
+
+            <Card variant="fullWidth">
+              <FormLayout>
+                <TextField
+                  label="URL"
+                  value={url}
+                  onChange={(value) => setUrl(value)}
+                  prefix={<Link>Visit link</Link>}
+                  connectedRight={
+                    <Button onClick={() => alert("All products selected")}>
+                      All products
+                    </Button>
+                  }
+                />
+                <Checkbox
+                  label="Open in new tab"
+                  checked={openInNewTab}
+                  onChange={(checked) => setOpenInNewTab(checked)}
+                />
+                <TextField
+                  label="Text"
+                  value={text}
+                  onChange={(value) => setText(value)}
+                  multiline
+                  prefix={<strong>Locales</strong>}
+                  helpText="Add the banner text here"
+                />
+              </FormLayout>
+            </Card>
+          </InlineStack>
+        </Layout.Section>
+
+        {/* Main Content */}
+        <Layout.Section variant="twoThirds">
+          <Card title="Announcement Bar">
+            <div
+              style={{
+                backgroundColor: "#000",
+                color: "#fff",
+                padding: "16px",
+                borderRadius: "4px",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <Text variant="headingMd">{text}</Text>
+            </div>
+            <div style={{ marginTop: "20px", textAlign: "center" }}>
+              <Text variant="bodyMd">
+                This is how your banner will look on your website
+              </Text>
+            </div>
           </Card>
-        </InlineStack>
-      </Layout.Section>
-
-      {/* Main Content */}
-      <Layout.Section variant="twoThirds">
-        <Card title="Announcement Bar">
-          <div
-            style={{
-              backgroundColor: "#000",
-              color: "#fff",
-              padding: "16px",
-              borderRadius: "4px",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <Text variant="headingMd">{text}</Text>
-          </div>
-          <div style={{ marginTop: "20px", textAlign: "center" }}>
-            <Text variant="bodyMd">
-              This is how your banner will look on your website
-            </Text>
-          </div>
-        </Card>
-      </Layout.Section>
-    </Layout>
+        </Layout.Section>
+      </Layout>
+    </div>
   );
 }

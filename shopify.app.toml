@@ -3,7 +3,7 @@
 client_id = "76d8fe1e3c1044d8312f3c8b5db76765"
 name = "Banner Anywhere"
 handle = "banner-anywhere"
-application_url = "https://nec-women-france-cu.trycloudflare.com"
+application_url = "https://times-towns-fatal-indicator.trycloudflare.com"
 embedded = true
 
 [build]
@@ -17,9 +17,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://nec-women-france-cu.trycloudflare.com/auth/callback",
-  "https://nec-women-france-cu.trycloudflare.com/auth/shopify/callback",
-  "https://nec-women-france-cu.trycloudflare.com/api/auth/callback"
+  "https://times-towns-fatal-indicator.trycloudflare.com/auth/callback",
+  "https://times-towns-fatal-indicator.trycloudflare.com/auth/shopify/callback",
+  "https://times-towns-fatal-indicator.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
