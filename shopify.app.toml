@@ -3,7 +3,7 @@
 client_id = "76d8fe1e3c1044d8312f3c8b5db76765"
 name = "Banner Anywhere"
 handle = "banner-anywhere"
-application_url = "https://times-towns-fatal-indicator.trycloudflare.com"
+application_url = "https://film-washing-flu-leaves.trycloudflare.com"
 embedded = true
 
 [build]
@@ -17,9 +17,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://times-towns-fatal-indicator.trycloudflare.com/auth/callback",
-  "https://times-towns-fatal-indicator.trycloudflare.com/auth/shopify/callback",
-  "https://times-towns-fatal-indicator.trycloudflare.com/api/auth/callback"
+  "https://film-washing-flu-leaves.trycloudflare.com/auth/callback",
+  "https://film-washing-flu-leaves.trycloudflare.com/auth/shopify/callback",
+  "https://film-washing-flu-leaves.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]

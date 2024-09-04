@@ -31,17 +31,23 @@ export default function BannerEditor() {
     { icon: HomeIcon, tooltip: "Templates" },
     { icon: OrderIcon, tooltip: "Content" },
     { icon: ProductIcon, tooltip: "Styles" },
-    { icon: PersonFilledIcon, tooltip: "Settings" },
+    { icon: SettingsIcon, tooltip: "Settings" },
   ];
 
   return (
-    <div style={{ backgroundColor: 'rgba(0,0,0,0.05)', height: '100%' }}>
-
-      <Layout >
+    <div style={{ backgroundColor: "rgba(0,0,0,0.05)", height: "100%" }}>
+      <Layout>
         {/* Sidebar */}
         <Layout.Section variant="oneThird">
-          <InlineStack gap="600">
-            <div style={{ padding: "8px", height: '100vh' }}>
+          <InlineStack gap={400}>
+            <div
+              style={{
+                padding: "8px",
+                height: "100vh",
+                background: "#fff",
+                borderRight: "1px solid #ddd",
+              }}
+            >
               {iconMenu.map(({ icon, tooltip }, key) => (
                 <div
                   style={{
@@ -56,35 +62,41 @@ export default function BannerEditor() {
                 </div>
               ))}
             </div>
-
-            <Card variant="fullWidth">
-              <FormLayout>
-                <TextField
-                  label="URL"
-                  value={url}
-                  onChange={(value) => setUrl(value)}
-                  prefix={<Link>Visit link</Link>}
-                  connectedRight={
-                    <Button onClick={() => alert("All products selected")}>
-                      All products
-                    </Button>
-                  }
-                />
-                <Checkbox
-                  label="Open in new tab"
-                  checked={openInNewTab}
-                  onChange={(checked) => setOpenInNewTab(checked)}
-                />
-                <TextField
-                  label="Text"
-                  value={text}
-                  onChange={(value) => setText(value)}
-                  multiline
-                  prefix={<strong>Locales</strong>}
-                  helpText="Add the banner text here"
-                />
-              </FormLayout>
-            </Card>
+            <BlockStack>
+              <div style={{ padding: "18px 5px" }}>
+                <Text variant="headingMd" as="h6" style={{ padding: "20px" }}>
+                  Banner Content
+                </Text>
+              </div>
+              <Card>
+                <FormLayout>
+                  <TextField
+                    label="URL"
+                    value={url}
+                    onChange={(value) => setUrl(value)}
+                    prefix={<Link>Visit link</Link>}
+                    connectedRight={
+                      <Button onClick={() => alert("All products selected")}>
+                        All products
+                      </Button>
+                    }
+                  />
+                  <Checkbox
+                    label="Open in new tab"
+                    checked={openInNewTab}
+                    onChange={(checked) => setOpenInNewTab(checked)}
+                  />
+                  <TextField
+                    label="Text"
+                    value={text}
+                    onChange={(value) => setText(value)}
+                    multiline
+                    prefix={<strong>Locales</strong>}
+                    helpText="Add the banner text here"
+                  />
+                </FormLayout>
+              </Card>
+            </BlockStack>
           </InlineStack>
         </Layout.Section>
 
